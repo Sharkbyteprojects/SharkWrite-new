@@ -1,0 +1,17 @@
+{
+  "name": "SharkWrite",
+  "productName": "SharkWrite",
+  "description": "SharkWrite",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Sharkbyteprojects",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "8.0.0-beta.4"
+  },
+  "LICENSE":"MIT"
+}

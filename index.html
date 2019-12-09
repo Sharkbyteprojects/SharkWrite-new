@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SharkWrite</title>
+    <style>
+      textarea{
+      height: 70vh;
+      width: 90vw;
+      background-color:#2f3241;
+      resize: none;
+      color:#74b1be;
+      }
+      body{
+        background-color:#2f3241;
+        text-align:center;
+        color:#afff00;
+      }
+      button{
+        color:#2f3241;
+       	line-height: 3;
+      	border-radius: 10px;
+        background-color:#afff00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SharkWrite</h1>
+  <button id="copy">Copy Document to Clipboard</button>
+  <button id="ssd">New</button>
+  <button id="paste">Open Document</button>
+  <button id="paste">Save Document</button>
+  <br />
+  <textarea></textarea>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
