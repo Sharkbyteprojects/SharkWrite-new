@@ -7,24 +7,24 @@ var url=""
 const copyButton = document.querySelector('#copy')
 const pasteButton = document.querySelector('#paste')
 const textarea = document.querySelector('textarea')
-const save = document.querySelector('saveas')
-const dds = document.querySelector('ssd')
+const save = document.querySelector('#saveas')
+const titless = document.querySelector('title')
+const dds = document.querySelector('#ssd')
 copyButton.onclick = () => {
   clipboard.writeText(textarea.value)
 }
-
-
 ////////////////////////////////////////
 ipcRenderer.on('asynchronous-reply', (...args) => {
   if(args[1].num==1){
-  const mainsdss=args[1].data
-url=mainsdss
-fs.readFile(mainsdss, "utf8", function(err, data) {
+  url=args[1].data
+titless.innerText="SharkWrite - " + url
+fs.readFile(url, "utf8", function(err, data) {
   textarea.value=data;
 });}else{
   url=args[1].data
   fs.writeFile(url, textarea.value, (err) => {
        console.log("Complete")
+       titless.innerText="SharkWrite - " + url
   })
 }
 })
@@ -42,5 +42,6 @@ save.onclick=()=>{
 }
 dds.onclick=()=>{
   textarea.value="";
+  titless.innerText="SharkWrite"
   url="";
 }
