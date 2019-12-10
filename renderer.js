@@ -9,6 +9,7 @@ const titless = document.querySelector('title')
 const dds = document.querySelector('#ssd')
 const assda = document.querySelector('#autosav')
 assda.disabled=true
+assda.checked=false
 copyButton.onclick = () => {
   clipboard.writeText(textarea.value)
 }
@@ -51,10 +52,11 @@ dds.onclick=()=>{
   titless.innerText="SharkWrite"
   url="";
   assda.disabled=true
+  assda.checked=false
 }
 var countdev=0;
 textarea.onkeyup=()=>{
-  if(assda.checked){
+  if(assda.checked&&!assda.disabled){
     countdev++
     if(countdev>=6){
       if(url!=""){
