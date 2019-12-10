@@ -45,8 +45,18 @@ dds.onclick=()=>{
   url="";
 }
 const assda = document.querySelector('#autosav')
+var countdev=0;
 textarea.onkeyup=()=>{
   if(assda.checked){
-    save.onclick()
+    countdev++
+    if(countdev>=6){
+      if(url!=""){
+        fs.writeFile(url, textarea.value, (err) => {
+           console.log("Complete")
+        })
+      }else{
+        ipcRenderer.send('asynchronous-message', 'sets');
+      }
+    }
   }
 }
