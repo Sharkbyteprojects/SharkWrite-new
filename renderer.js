@@ -26,7 +26,7 @@ fs.readFile(url, "utf8", function(err, data) {
   })
 }
 })
-///////////////////////////////
+////////////////////////////////////
 pasteButton.onclick = () => {
   ipcRenderer.send('asynchronous-message', 'getima');
 }
