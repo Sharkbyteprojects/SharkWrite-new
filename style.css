@@ -1,5 +1,5 @@
 textarea {
-  height: calc(100vh - 90px);
+  height: calc(100vh - (90px + 20px));
   width: calc(100vw - 40px);
   background-color: #2f3241;
   resize: none;
