@@ -22,18 +22,18 @@
       	border-radius: 10px;
         background-color:#afff00;
       }
+      .noselect {user-select: none;}
     </style>
   </head>
   <body>
-    <h1>SharkWrite</h1>
+  <div class="noselect">
   <button id="copy">Copy Document to Clipboard</button>
   <button id="ssd">New</button>
   <button id="paste">Open Document</button>
   <button id="saveas">Save Document</button>
-  <br />
+  <br /></div>
   <textarea></textarea>
     <script>
-      // You can also require other files to run in this process
       require('./renderer.js')
     </script>
   </body>
