@@ -42,7 +42,9 @@ app.on('activate', function () {
   }).catch(err => {
     console.log(err)
   })}else{
-    dialog.showSaveDialog(mainWindow, {properties: ["saveFile"]}).then(result=>{
+    dialog.showSaveDialog(mainWindow, {
+      properties: ["saveFile"]
+    }).then(result=>{
       if (result.canceled) {
       console.log('Dialog was canceled')
     } else {
