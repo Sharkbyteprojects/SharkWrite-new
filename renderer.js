@@ -1,6 +1,3 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
 const { clipboard,ipcRenderer } = require('electron')
 const fs=require("fs")
 var url=""
@@ -13,7 +10,8 @@ const dds = document.querySelector('#ssd')
 copyButton.onclick = () => {
   clipboard.writeText(textarea.value)
 }
-////////////////////////////////////////
+//////////////////////////////////////
+// Async Reciever
 ipcRenderer.on('asynchronous-reply', (...args) => {
   if(args[1].num==1){
   url=args[1].data
@@ -28,6 +26,7 @@ fs.readFile(url, "utf8", function(err, data) {
   })
 }
 })
+///////////////////////////////
 pasteButton.onclick = () => {
   ipcRenderer.send('asynchronous-message', 'getima');
 }
