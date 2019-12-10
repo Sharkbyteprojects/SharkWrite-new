@@ -1,7 +1,7 @@
 # SharkWrite
 ## The new Version
 
-[Latest Release (Downloads)](https://github.com/Sharkbyteprojects/SharkWrite-new/releases/v3.0.0)
+[Latest Release (Downloads)](https://github.com/Sharkbyteprojects/SharkWrite-new/releases/v3.1.0)
 
 ### Screenshot
 
