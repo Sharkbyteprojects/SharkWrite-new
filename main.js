@@ -55,3 +55,4 @@ app.on('activate', function () {
     }).catch(err=>console.log(err))
   }
   })
+app.allowRendererProcessReuse=true
