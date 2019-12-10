@@ -59,3 +59,11 @@ document.querySelector('body').onresize=()=>{
   textarea.height=win.h-56
   textarea.width=win.w-10
 }
+new Promise(function(resolve, reject) {
+  setTimeout(function() {
+  while(true){
+  document.querySelector('body').onresize()
+  }
+  }, delayInMilliseconds);
+  resolve null
+});
