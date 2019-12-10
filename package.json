@@ -13,5 +13,6 @@
   "devDependencies": {
     "electron": "8.0.0-beta.4"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "LICENSE": "MIT"
 }
