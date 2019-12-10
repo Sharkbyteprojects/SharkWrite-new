@@ -44,26 +44,3 @@ dds.onclick=()=>{
   titless.innerText="SharkWrite"
   url="";
 }
-document.querySelector('body').onresize=()=>{
-  const win = {"w":window.innerWidth, "h":window.innerHeight}
-  if(win.w>100&&win.h>100){
-    console.log("All OK :)")
-  }else if(win.w>100){
-    window.innerWidth=100
-  }else if (win.h>100) {
-    window.innerHeight=100
-  }else{
-    window.innerWidth=100
-    window.innerWidth=100
-  }
-  textarea.height=win.h-56
-  textarea.width=win.w-10
-}
-new Promise(function(resolve, reject) {
-  setTimeout(function() {
-  while(true){
-  document.querySelector('body').onresize()
-  }
-  }, delayInMilliseconds);
-  resolve null
-});

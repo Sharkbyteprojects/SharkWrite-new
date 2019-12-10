@@ -1,19 +1,21 @@
-textarea{
-/*height: 70vh;
-width: 90vw;*/
-background-color:#2f3241;
-resize: none;
-color:#74b1be;
+textarea {
+  height: calc(100vh - 90px);
+  width: calc(100vw - 40px);
+  background-color: #2f3241;
+  resize: none;
+  color: #74b1be;
 }
-body{
-  background-color:#2f3241;
-  text-align:center;
-  color:#afff00;
+body {
+  background-color: #2f3241;
+  text-align: center;
+  color: #afff00;
 }
-button{
-  color:#2f3241;
+button {
+  color: #2f3241;
   line-height: 3;
   border-radius: 10px;
-  background-color:#afff00;
+  background-color: #afff00;
 }
-.noselect {user-select: none;}
+.noselect {
+  user-select: none;
+}
