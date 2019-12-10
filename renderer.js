@@ -44,3 +44,9 @@ dds.onclick=()=>{
   titless.innerText="SharkWrite"
   url="";
 }
+const assda = document.querySelector('#autosav')
+textarea.onkeyup=()=>{
+  if(assda.checked){
+    save.onclick()
+  }
+}
