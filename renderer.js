@@ -7,6 +7,8 @@ const textarea = document.querySelector('textarea')
 const save = document.querySelector('#saveas')
 const titless = document.querySelector('title')
 const dds = document.querySelector('#ssd')
+const assda = document.querySelector('#autosav')
+assda.disabled=true
 copyButton.onclick = () => {
   clipboard.writeText(textarea.value)
 }
@@ -17,12 +19,17 @@ ipcRenderer.on('asynchronous-reply', (...args) => {
   url=args[1].data
 titless.innerText="SharkWrite - " + url
 fs.readFile(url, "utf8", function(err, data) {
-  textarea.value=data;
-});}else{
+  textarea.value=data
+  assda.disabled=false
+  assda.checked=false
+})
+}else{
   url=args[1].data
   fs.writeFile(url, textarea.value, (err) => {
        console.log("Complete")
        titless.innerText="SharkWrite - " + url
+       assda.disabled=false
+       assda.checked=false
   })
 }
 })
@@ -43,8 +50,8 @@ dds.onclick=()=>{
   textarea.value="";
   titless.innerText="SharkWrite"
   url="";
+  assda.disabled=true
 }
-const assda = document.querySelector('#autosav')
 var countdev=0;
 textarea.onkeyup=()=>{
   if(assda.checked){
@@ -54,8 +61,6 @@ textarea.onkeyup=()=>{
         fs.writeFile(url, textarea.value, (err) => {
            console.log("Complete")
         })
-      }else{
-        ipcRenderer.send('asynchronous-message', 'sets');
       }
     }
   }
