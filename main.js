@@ -48,7 +48,8 @@ app.on('activate', function () {
       if (result.canceled) {
       console.log('Dialog was canceled')
     } else {
-      const file = result.filePaths[0]
+      console.log(result)
+      const file = result.filePath
       event.sender.send('asynchronous-reply', {"data":file, "num": 2})
     }
     }).catch(err=>console.log(err))
