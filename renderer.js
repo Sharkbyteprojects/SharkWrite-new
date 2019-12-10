@@ -56,9 +56,10 @@ dds.onclick=()=>{
 }
 var countdev=0;
 textarea.onkeyup=()=>{
-  if(assda.checked&&!assda.disabled){
+  if(assda.checked){
     countdev++
     if(countdev>=6){
+      countdev=0
       if(url!=""){
         fs.writeFile(url, textarea.value, (err) => {
            console.log("Complete")
