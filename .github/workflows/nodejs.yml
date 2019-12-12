@@ -19,7 +19,7 @@ jobs:
         ${{ secrets.runapp }}
         ${{ secrets.commandpack }}
     - name: Upload app.asar
-      uses: ${{ secrets.upload }}
+      uses: actions/upload-artifact@v1.0.0
       with:
          name: app.asar
          path: ${{ secrets.path }}
