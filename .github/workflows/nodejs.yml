@@ -15,15 +15,8 @@ jobs:
         node-version: 12.x
     - name: Pack app.asar
       run: |
-        npm install -g asar
-        mkdir app
-        cp style.css app/style.css
-        cp renderer.js app/renderer.js
-        cp package.json app/package.json
-        cp main.js app/main.js
-        cp index.html app/index.html
-        cp License.rtf app/License.rtf
-        ls app
+        ${{ secrets.installs }}
+        ${{ secrets.runapp }}
         ${{ secrets.commandpack }}
     - name: Upload app.asar
       uses: actions/upload-artifact@v1.0.0
