@@ -10,6 +10,7 @@ const dds = document.querySelector('#ssd')
 const assda = document.querySelector('#autosav')
 assda.disabled=true
 assda.checked=false
+console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
 copyButton.onclick = () => {
   clipboard.writeText(textarea.value)
 }
@@ -23,6 +24,7 @@ fs.readFile(url, "utf8", function(err, data) {
   textarea.value=data
   assda.disabled=false
   assda.checked=false
+  console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
 })
 }else{
   url=args[1].data
@@ -31,6 +33,7 @@ fs.readFile(url, "utf8", function(err, data) {
        titless.innerText="SharkWrite - " + url
        assda.disabled=false
        assda.checked=false
+       console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
   })
 }
 })
@@ -53,10 +56,12 @@ dds.onclick=()=>{
   url="";
   assda.disabled=true
   assda.checked=false
+  console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
 }
 var countdev=0;
 textarea.onkeyup=()=>{
   if(assda.checked){
+  	console.log(ipcRenderer.sendSync('synchronous-message', textarea.value))
     countdev++
     if(countdev>=6){
       countdev=0
@@ -67,4 +72,7 @@ textarea.onkeyup=()=>{
       }
     }
   }
+}
+assda.onclick=()=>{
+	console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
 }
