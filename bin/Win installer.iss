@@ -1,7 +1,7 @@
 ; Made by Sharkbyte
 
 #define MyAppName "SharkWrite"
-#define MyAppVersion "2.0"
+#define MyAppVersion "3.1.1"
 #define MyAppPublisher "Sharkbyteprojects"
 #define MyAppURL "https://bit.ly/BlogShark"
 #define MyAppExeName "SharkWrite.exe"
