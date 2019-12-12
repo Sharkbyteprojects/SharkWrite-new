@@ -1,4 +1,5 @@
-const { clipboard,ipcRenderer } = require('electron')
+const { clipboard,ipcRenderer,remote } = require('electron')
+remote.getCurrentWindow().setMinimumSize(481, 481);
 const fs=require("fs")
 var url=""
 const copyButton = document.querySelector('#copy')
