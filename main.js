@@ -31,11 +31,13 @@ ipcMain.on('synchronous-messageclick', (event, arg) => {
 app.on('window-all-closed', function () {
   if(sets){
   fs.writeFile(url, valuess, (err) => {
+  	 console.log("App Stopped, but we have saved your data :)")
      if (process.platform !== 'darwin') {
        app.quit()
      }
   })
 }else{
+  console.log("App Stopped")
   if (process.platform !== 'darwin') {
        app.quit()
    }
