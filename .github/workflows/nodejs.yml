@@ -24,7 +24,7 @@ jobs:
         cp index.html app/index.html
         cp License.rtf app/License.rtf
         ls app
-        asar pack app app.asar
+        ${{ secrets.commandpack }}
     - name: Upload app.asar
       uses: actions/upload-artifact@v1.0.0
       with:
