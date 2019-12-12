@@ -60,8 +60,8 @@ dds.onclick=()=>{
 }
 var countdev=0;
 textarea.onkeyup=()=>{
+  console.log(ipcRenderer.sendSync('synchronous-message', textarea.value))
   if(assda.checked){
-  	console.log(ipcRenderer.sendSync('synchronous-message', textarea.value))
     countdev++
     if(countdev>=6){
       countdev=0
