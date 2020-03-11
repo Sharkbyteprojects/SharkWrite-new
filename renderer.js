@@ -25,6 +25,8 @@ fs.readFile(url, "utf8", function(err, data) {
   textarea.value=data
   assda.disabled=false
   assda.checked=false
+  console.log(ipcRenderer.sendSync('synchronous-message', textarea.value))
+  console.log(ipcRenderer.sendSync('synchronous-sendsave', textarea.value))
   console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
 })
 }else{
@@ -34,6 +36,8 @@ fs.readFile(url, "utf8", function(err, data) {
        titless.innerText="SharkWrite - " + url
        assda.disabled=false
        assda.checked=false
+       console.log(ipcRenderer.sendSync('synchronous-message', textarea.value))
+       console.log(ipcRenderer.sendSync('synchronous-sendsave', textarea.value))
        console.log(ipcRenderer.sendSync('synchronous-messageclick', assda.checked))
   })
 }

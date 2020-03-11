@@ -1,18 +1,16 @@
 {
-  "name": "SharkWrite",
-  "productName": "SharkWrite",
-  "description": "SharkWrite",
+  "name": "sharkwriter",
+  "productName": "sharkwriter",
+  "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
-  "author": "Sharkbyteprojects",
+  "author": "Cedric",
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {},
   "devDependencies": {
     "electron": "8.0.0-beta.4"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
-  "LICENSE": "MIT"
+  }
 }
